@@ -1,0 +1,863 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Pancasila dalam Kehidupanku</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@600;700;800&display=swap">
+<style>
+/* Layout: satu panggung slide bergaya kartun (garis tebal, bayangan keras), maskot Si Garuda memandu, navigasi enam bagian di atas */
+:root{
+  --font-display:'Baloo 2','Trebuchet MS','Arial Rounded MT Bold',system-ui,sans-serif;
+  --font-body:'Nunito','Trebuchet MS',system-ui,sans-serif;
+  --bg:#FFE9A0; --dot:rgba(200,16,46,.10); --card:#FFFBEA; --gold-soft:#FFF0B8;
+  --ink:#3B0D12; --muted:#7A4034; --line:#6B1220; --title:#B30E29;
+  --gold:#F5B700; --gold-2:#FFD84D; --gold-ink:#4A1010;
+  --red:#C8102E; --red-ink:#FFF8E1;
+  --good:#17703A; --good-bg:#DDF5DF; --warn:#9A4A06; --warn-bg:#FFE6C4;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#2A0A10; --dot:rgba(255,198,26,.08); --card:#3F1219; --gold-soft:#55202A;
+    --ink:#FFF1CC; --muted:#EBCDA6; --line:#0E0204; --title:#FFD84D;
+    --gold:#FFC61A; --gold-2:#FFD84D; --gold-ink:#2A0A10;
+    --red:#D12A45; --red-ink:#FFFFFF;
+    --good:#7FE39B; --good-bg:#17381F; --warn:#FFC27A; --warn-bg:#4A2A0E;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#2A0A10; --dot:rgba(255,198,26,.08); --card:#3F1219; --gold-soft:#55202A;
+  --ink:#FFF1CC; --muted:#EBCDA6; --line:#0E0204; --title:#FFD84D;
+  --gold:#FFC61A; --gold-2:#FFD84D; --gold-ink:#2A0A10;
+  --red:#D12A45; --red-ink:#FFFFFF;
+  --good:#7FE39B; --good-bg:#17381F; --warn:#FFC27A; --warn-bg:#4A2A0E;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background-color:var(--bg);
+  background-image:radial-gradient(var(--dot) 2px,transparent 2.5px);
+  background-size:28px 28px;
+  color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.5;font-weight:600;
+  padding-block:16px 32px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+.app{max-width:980px;margin:0 auto;display:grid;gap:16px}
+button{font-family:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+
+/* Header + penunjuk bagian */
+.top{background:var(--red);color:var(--red-ink);border:3px solid var(--line);border-radius:22px;box-shadow:0 5px 0 var(--line);padding:12px 14px;display:grid;gap:10px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand svg{width:30px;height:30px;flex:none}
+.brand strong{font:800 1.3rem/1.1 var(--font-display);color:var(--gold-2)}
+.brand span{font-size:.9rem;opacity:.95}
+.steps{display:flex;flex-wrap:wrap;gap:6px}
+.step{display:inline-flex;align-items:center;gap:6px;border:2px solid var(--line);background:rgba(255,255,255,.16);color:var(--red-ink);border-radius:999px;padding:3px 10px 3px 4px;font-weight:800;font-size:.9rem;cursor:pointer}
+.step b{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--gold-2);color:var(--gold-ink);font:800 .95rem var(--font-display)}
+.step .lbl{display:none}
+.step[aria-current="true"]{background:var(--gold);color:var(--gold-ink)}
+.step[aria-current="true"] .lbl{display:inline}
+@media(min-width:860px){.step .lbl{display:inline}}
+
+/* Maskot */
+.guide{display:flex;align-items:center;gap:12px}
+.mascot{width:78px;height:78px;flex:none;animation:bob 2.4s ease-in-out infinite}
+.bubble{position:relative;margin:0;background:var(--card);border:3px solid var(--line);border-radius:18px;padding:10px 14px;font-weight:800;min-width:0}
+.bubble::before{content:"";position:absolute;left:-12px;top:50%;margin-top:-9px;border:9px solid transparent;border-left:0;border-right:10px solid var(--line)}
+
+/* Slide */
+.slide{background:var(--card);border:3px solid var(--line);border-radius:26px;box-shadow:0 7px 0 var(--line);padding:clamp(16px,3.2vw,32px);animation:in .4s ease both;min-width:0}
+.eyebrow{margin:0 0 4px;font:800 .8rem var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-family:var(--font-display);margin:0;text-wrap:balance;color:var(--title);line-height:1.1}
+h1{font-size:clamp(2.1rem,6.5vw,3.5rem);font-weight:800}
+h2{font-size:clamp(1.6rem,4.4vw,2.3rem);font-weight:800;margin-bottom:12px}
+h3{font-size:1.35rem;font-weight:800}
+.hl{background:linear-gradient(transparent 60%,var(--gold) 60%)}
+.lead{font-size:1.15rem;margin:12px 0 18px}
+p{margin:0 0 10px}
+.cols{display:grid;gap:22px;grid-template-columns:minmax(0,1fr)}
+@media(min-width:780px){.cols{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}.cols.wide-left{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}}
+
+/* Tombol */
+.btn{font:800 1.05rem var(--font-display);padding:.65rem 1.3rem;border:3px solid var(--line);border-radius:999px;background:var(--gold);color:var(--gold-ink);box-shadow:0 4px 0 var(--line);cursor:pointer;transition:transform .12s,box-shadow .12s;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--line)}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--line)}
+.btn.primary{background:var(--red);color:var(--red-ink)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:0 4px 0 var(--line)}
+.btn svg{width:22px;height:22px;flex:none}
+
+/* Lencana sila */
+.badge{display:inline-grid;place-items:center;width:52px;height:52px;border-radius:50%;border:3px solid var(--line);background:var(--bb,#fff);flex:none}
+.badge svg{width:74%;height:74%}
+.b1{--bb:#1D1414}.b2{--bb:#C8102E}.b3{--bb:#FFFFFF}.b4{--bb:#C8102E}.b5{--bb:#FFFFFF}
+.badge.sm{width:40px;height:40px}
+
+/* Pembuka */
+.idcard{background:var(--gold-soft);border:3px dashed var(--line);border-radius:18px;padding:12px 16px;margin:0}
+.idcard h3{font-size:1.05rem;margin-bottom:6px}
+.idcard dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:2px 12px}
+.idcard dt{color:var(--muted)}.idcard dd{margin:0;font-weight:800;overflow-wrap:anywhere}
+.nameform{display:grid;gap:6px;margin:0 0 16px}
+.nameform label{font-weight:800}
+.nameform .row{display:flex;flex-wrap:wrap;gap:10px}
+input[type=text],textarea{font:700 1rem var(--font-body);color:var(--ink);background:var(--card);border:3px solid var(--line);border-radius:14px;padding:.65rem .9rem;min-width:0}
+.nameform input{flex:1 1 200px}
+textarea{width:100%;resize:vertical;min-height:84px}
+.garuda{display:block;width:100%;max-width:340px;height:auto;margin-inline:auto}
+.fth{fill:#F5B700;stroke:#8A5A00;stroke-width:3}
+.q{cursor:pointer}
+.q .ic{transition:transform .25s;transform-box:fill-box;transform-origin:center}
+.q:hover .ic,.q.on .ic{transform:scale(1.14)}
+.ring{fill:none;stroke:#F5B700;stroke-width:5;opacity:0;transition:opacity .2s}
+.q.on .ring{opacity:1}
+.q:focus-visible{outline:none}.q:focus-visible .ring{opacity:1;stroke:#3B0D12;stroke-dasharray:6 4}
+
+/* Tujuan */
+.goal{background:var(--red);color:var(--red-ink);border:3px solid var(--line);border-radius:20px;padding:16px 20px;margin-bottom:16px;box-shadow:0 5px 0 var(--line)}
+.goal p{margin:0}.goal .gl{font:800 .8rem var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.goal .gt{font:800 clamp(1.25rem,3.4vw,1.7rem)/1.3 var(--font-display)}
+.goal .gt em{font-style:normal;color:var(--gold-2)}
+.checks{display:grid;gap:10px;margin:0 0 14px;padding:0;list-style:none}
+.check{position:relative;display:flex;gap:12px;align-items:center;padding:12px 14px;border:3px solid var(--line);border-radius:16px;background:var(--card);cursor:pointer;transition:background .2s}
+.check input{position:absolute;opacity:0;width:1px;height:1px}
+.box{width:32px;height:32px;border:3px solid var(--line);border-radius:10px;background:var(--card);display:grid;place-items:center;flex:none}
+.box::after{content:"";width:9px;height:16px;border:solid var(--gold-ink);border-width:0 4px 4px 0;transform:rotate(45deg) scale(0);transition:transform .15s;margin-top:-3px}
+.check input:checked + .box{background:var(--gold);animation:pop .3s}
+.check input:checked + .box::after{transform:rotate(45deg) scale(1)}
+.check input:focus-visible + .box{outline:3px solid var(--ink);outline-offset:3px}
+.check:has(input:checked){background:var(--gold-soft)}
+.check .ct{min-width:0}
+.five{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+
+/* Materi */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 12px}
+.tab{display:inline-flex;align-items:center;gap:6px;border:3px solid var(--line);border-radius:999px;background:var(--card);padding:3px 12px 3px 3px;font-weight:800;cursor:pointer;transition:transform .12s}
+.tab .badge{width:36px;height:36px;border-width:2px}
+.tab[aria-selected="true"]{background:var(--gold);color:var(--gold-ink);box-shadow:0 3px 0 var(--line);transform:translateY(-2px)}
+.ptab{padding:.45rem 1.1rem;border-radius:999px}
+.detail{background:var(--gold-soft);border:3px solid var(--line);border-radius:18px;padding:14px 16px;animation:in .3s ease both}
+.detail .no{margin:0;font:800 .8rem var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.detail h3{margin:2px 0 8px;font-size:1.25rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
+.chip{display:inline-block;background:var(--gold);color:var(--gold-ink);border:2px solid var(--line);border-radius:999px;padding:1px 10px;font-weight:800;font-size:.9rem}
+.ex{border-top:3px dotted var(--line);padding-top:8px;margin-top:4px}
+.ex b{color:var(--title)}
+.cards{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.item{display:flex;gap:12px;align-items:center;border:3px solid var(--line);border-radius:16px;background:var(--card);padding:10px 12px;animation:in .3s ease both}
+.item .tx{flex:1;min-width:0}
+.item small{display:block;color:var(--muted);font-weight:800}
+
+/* Aktivitas */
+.progress{display:flex;justify-content:space-between;gap:10px;font-weight:800;margin-bottom:8px;flex-wrap:wrap}
+.story{font:800 clamp(1.2rem,3.2vw,1.55rem)/1.35 var(--font-display);background:var(--gold-soft);border:3px solid var(--line);border-radius:18px;padding:16px 18px;margin:0 0 14px}
+.opts{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin-bottom:12px}
+.opt{display:flex;align-items:center;gap:10px;border:3px solid var(--line);border-radius:16px;background:var(--card);padding:8px 12px;text-align:left;font-weight:800;cursor:pointer;box-shadow:0 4px 0 var(--line);transition:transform .12s}
+.opt:hover:not(:disabled){transform:translateY(-2px)}
+.opt:disabled{cursor:default}
+.opt.right{background:var(--good-bg);border-color:var(--good)}
+.opt.wrong{background:var(--warn-bg);border-color:var(--warn);animation:shake .35s}
+.opt small{display:block;color:var(--muted);font-weight:700}
+.fb{border:3px solid var(--line);border-radius:18px;padding:12px 16px;margin:0 0 12px;animation:in .3s ease both}
+.fb.good{background:var(--good-bg)}.fb.bad{background:var(--warn-bg)}
+.fb .ft{font:800 1.2rem var(--font-display);margin:0 0 2px}
+.fb.good .ft{color:var(--good)}.fb.bad .ft{color:var(--warn)}
+.fb p:last-child{margin-bottom:0}
+.meter{display:grid;gap:8px;margin:14px 0}
+.mrow{display:flex;align-items:center;gap:10px}
+.mrow .nm{flex:0 0 118px;font-weight:800;font-size:.95rem}
+.mbar{display:flex;gap:6px;flex:1}
+.mbar i{flex:1;height:18px;border:3px solid var(--line);border-radius:999px;background:var(--card);transition:background .25s}
+.mbar i.on{background:var(--gold)}
+.sum{background:var(--gold-soft);border:3px solid var(--line);border-radius:16px;padding:10px 14px;font-weight:800}
+
+/* Kuis */
+.qtop{display:flex;justify-content:space-between;gap:10px;font-weight:800;flex-wrap:wrap;margin-bottom:8px}
+.dots{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.dots i{width:26px;height:26px;border-radius:50%;border:3px solid var(--line);background:var(--card);display:block}
+.dots i.cur{background:var(--gold);transform:scale(1.15)}
+.dots i.ok{background:var(--good-bg);border-color:var(--good)}
+.dots i.no{background:var(--warn-bg);border-color:var(--warn)}
+.statement{font:800 clamp(1.3rem,3.6vw,1.8rem)/1.35 var(--font-display);background:var(--gold-soft);border:3px solid var(--line);border-radius:20px;padding:20px 22px;margin:0 0 14px;animation:in .3s ease both}
+.qbtns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:14px}
+.ans{flex:1 1 150px;font-size:1.4rem;padding:.85rem 1rem}
+.ans.false{background:var(--red);color:var(--red-ink)}
+.ans.picked{outline:4px solid var(--ink);outline-offset:3px}
+
+/* Hasil */
+.score{display:grid;gap:14px;grid-template-columns:auto minmax(0,1fr);align-items:center;margin-bottom:14px}
+.big{display:grid;place-items:center;width:132px;height:132px;border-radius:50%;background:var(--gold);color:var(--gold-ink);border:4px solid var(--line);box-shadow:0 6px 0 var(--line);font:800 2.6rem/1 var(--font-display)}
+.big small{font-size:1rem;display:block;text-align:center;margin-top:-4px}
+.stars{display:flex;gap:4px;margin:2px 0 6px}
+.stars svg{width:34px;height:34px}
+.stars .off{opacity:.25;filter:grayscale(1)}
+@media(max-width:520px){.score{grid-template-columns:minmax(0,1fr);justify-items:start}}
+.stats{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:12px 0}
+.stat{border:3px solid var(--line);border-radius:16px;background:var(--gold-soft);padding:10px 14px}
+.stat b{display:block;font:800 1.7rem/1.1 var(--font-display);color:var(--title)}
+.review{display:grid;gap:8px;margin:8px 0 14px;padding:0;list-style:none}
+.review li{border:3px solid var(--line);border-radius:14px;background:var(--warn-bg);padding:8px 12px}
+.review b{color:var(--warn)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+
+/* Refleksi */
+.moods{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 12px}
+.mood{display:flex;align-items:center;gap:8px;border:3px solid var(--line);border-radius:999px;background:var(--card);padding:4px 16px 4px 6px;font-weight:800;cursor:pointer}
+.mood svg{width:38px;height:38px}
+.mood[aria-pressed="true"]{background:var(--gold);color:var(--gold-ink);box-shadow:0 3px 0 var(--line)}
+.field{display:grid;gap:4px;margin-bottom:12px}
+.field label{font-weight:800}
+.pledge{border:5px double var(--line);border-radius:20px;background:var(--gold-soft);padding:18px 20px;text-align:center;animation:in .4s ease both;margin-top:14px}
+.pledge h3{margin-bottom:6px}
+.pledge p{font-size:1.1rem}
+.pledge .sig{font:800 1.2rem var(--font-display);color:var(--title)}
+
+/* Navigasi bawah */
+.nav{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.count{font-weight:800;text-align:center;flex:1;min-width:0}
+.pager{display:flex;justify-content:center;gap:6px;margin-top:4px}
+.pager i{width:10px;height:10px;border-radius:50%;background:var(--line);opacity:.3;display:block}
+.pager i.cur{opacity:1;background:var(--red);transform:scale(1.3)}
+
+/* Animasi ringan */
+@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes pop{0%{transform:scale(.7)}60%{transform:scale(1.2)}100%{transform:scale(1)}}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@keyframes fly{from{transform:translate(0,0) scale(.4) rotate(0);opacity:1}to{transform:translate(var(--dx),calc(var(--dy) + 140px)) rotate(var(--rot)) scale(1);opacity:0}}
+.conf{position:fixed;width:14px;height:14px;z-index:60;pointer-events:none;clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);animation:fly .95s ease-out forwards}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="ic1" viewBox="0 0 100 100"><polygon points="50,10 60,38.2 89.9,39 66.2,57.3 74.7,86 50,69 25.3,86 33.8,57.3 10.1,39 40,38.2" fill="#F5B700" stroke="#FFE27A" stroke-width="3" stroke-linejoin="round"/></symbol>
+    <symbol id="ic2" viewBox="0 0 100 100"><g fill="none" stroke-width="8"><rect x="6" y="34" width="42" height="32" rx="16" stroke="#FFF6D6"/><rect x="52" y="34" width="42" height="32" rx="16" stroke="#FFF6D6"/><rect x="30" y="40" width="40" height="20" rx="10" stroke="#FFD84D"/></g></symbol>
+    <symbol id="ic3" viewBox="0 0 100 100"><path d="M30,56 V80 M70,56 V80 M40,60 V84 M60,60 V84" stroke="#7A4A22" stroke-width="3" stroke-linecap="round" fill="none"/><rect x="44" y="50" width="12" height="40" rx="4" fill="#7A4A22"/><g fill="#2E9E4F" stroke="#1B6B34" stroke-width="3"><circle cx="28" cy="44" r="15"/><circle cx="72" cy="44" r="15"/><circle cx="50" cy="30" r="20"/></g><circle cx="50" cy="46" r="13" fill="#2E9E4F"/></symbol>
+    <symbol id="ic4" viewBox="0 0 100 100"><g fill="none" stroke="#FFF6D6" stroke-width="8" stroke-linecap="round"><path d="M30,40 C12,40 8,24 14,12"/><path d="M70,40 C88,40 92,24 86,12"/></g><ellipse cx="22" cy="48" rx="9" ry="5" fill="#1D1414" transform="rotate(-20 22 48)"/><ellipse cx="78" cy="48" rx="9" ry="5" fill="#1D1414" transform="rotate(20 78 48)"/><path d="M28,38 Q50,30 72,38 L68,66 Q66,82 50,90 Q34,82 32,66 Z" fill="#1D1414"/><circle cx="40" cy="52" r="3.5" fill="#FFF6D6"/><circle cx="60" cy="52" r="3.5" fill="#FFF6D6"/><ellipse cx="50" cy="76" rx="12" ry="9" fill="#5A4646"/><circle cx="45" cy="76" r="2" fill="#1D1414"/><circle cx="55" cy="76" r="2" fill="#1D1414"/></symbol>
+    <symbol id="ic5" viewBox="0 0 100 100"><path d="M28,92 C30,66 34,44 26,12" fill="none" stroke="#C98A00" stroke-width="3" stroke-linecap="round"/><g fill="#F5B700" stroke="#C98A00" stroke-width="1.5"><ellipse cx="34" cy="24" rx="4" ry="8" transform="rotate(25 34 24)"/><ellipse cx="20" cy="30" rx="4" ry="8" transform="rotate(-25 20 30)"/><ellipse cx="36" cy="44" rx="4" ry="8" transform="rotate(25 36 44)"/><ellipse cx="22" cy="48" rx="4" ry="8" transform="rotate(-25 22 48)"/><ellipse cx="37" cy="64" rx="4" ry="8" transform="rotate(25 37 64)"/><ellipse cx="24" cy="68" rx="4" ry="8" transform="rotate(-25 24 68)"/></g><path d="M74,92 C74,76 72,64 74,52" fill="none" stroke="#2E9E4F" stroke-width="4" stroke-linecap="round"/><path d="M74,78 q-14,-4 -16,-14 q12,0 16,14z" fill="#2E9E4F"/><g fill="#FFFFFF" stroke="#A8A08C" stroke-width="3"><circle cx="64" cy="44" r="10"/><circle cx="82" cy="42" r="10"/><circle cx="73" cy="32" r="10"/></g></symbol>
+    <symbol id="mascot" viewBox="0 0 120 120">
+      <g stroke="#6B1220" stroke-width="3" stroke-linejoin="round">
+        <ellipse cx="22" cy="76" rx="12" ry="22" fill="#F5B700" transform="rotate(-15 22 76)"/>
+        <ellipse cx="98" cy="76" rx="12" ry="22" fill="#F5B700" transform="rotate(15 98 76)"/>
+        <ellipse cx="60" cy="72" rx="38" ry="40" fill="#C8102E"/>
+        <ellipse cx="60" cy="84" rx="22" ry="22" fill="#FFD84D"/>
+        <ellipse cx="46" cy="22" rx="6" ry="14" fill="#F5B700" transform="rotate(-20 46 22)"/>
+        <ellipse cx="60" cy="18" rx="6" ry="15" fill="#F5B700"/>
+        <ellipse cx="74" cy="22" rx="6" ry="14" fill="#F5B700" transform="rotate(20 74 22)"/>
+        <circle cx="46" cy="58" r="11" fill="#fff"/><circle cx="74" cy="58" r="11" fill="#fff"/>
+        <path d="M50,70 L70,70 L60,84 Z" fill="#F5B700"/>
+        <ellipse cx="46" cy="112" rx="9" ry="5" fill="#F5B700"/><ellipse cx="74" cy="112" rx="9" ry="5" fill="#F5B700"/>
+      </g>
+      <circle cx="48" cy="59" r="5.5" fill="#2B1414"/><circle cx="72" cy="59" r="5.5" fill="#2B1414"/>
+      <circle cx="50" cy="57" r="2" fill="#fff"/><circle cx="74" cy="57" r="2" fill="#fff"/>
+    </symbol>
+    <symbol id="face1" viewBox="0 0 60 60"><circle cx="30" cy="30" r="26" fill="#FFD84D" stroke="#6B1220" stroke-width="3"/><circle cx="21" cy="24" r="3.5" fill="#3B0D12"/><circle cx="39" cy="24" r="3.5" fill="#3B0D12"/><path d="M17,35 Q30,50 43,35" fill="none" stroke="#3B0D12" stroke-width="3.5" stroke-linecap="round"/></symbol>
+    <symbol id="face2" viewBox="0 0 60 60"><circle cx="30" cy="30" r="26" fill="#FFD84D" stroke="#6B1220" stroke-width="3"/><path d="M15,22 l6,-6 l6,6 M33,22 l6,-6 l6,6" fill="none" stroke="#3B0D12" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="30" cy="41" rx="9" ry="7" fill="#C8102E" stroke="#3B0D12" stroke-width="3"/></symbol>
+    <symbol id="face3" viewBox="0 0 60 60"><circle cx="30" cy="30" r="26" fill="#FFD84D" stroke="#6B1220" stroke-width="3"/><circle cx="21" cy="26" r="3.5" fill="#3B0D12"/><circle cx="39" cy="26" r="3.5" fill="#3B0D12"/><path d="M15,17 l10,3 M45,17 l-10,3" stroke="#3B0D12" stroke-width="3" stroke-linecap="round"/><path d="M18,43 Q24,37 30,43 T42,43" fill="none" stroke="#3B0D12" stroke-width="3.5" stroke-linecap="round"/></symbol>
+    <symbol id="starfull" viewBox="0 0 100 100"><polygon points="50,10 60,38.2 89.9,39 66.2,57.3 74.7,86 50,69 25.3,86 33.8,57.3 10.1,39 40,38.2" fill="#F5B700" stroke="#6B1220" stroke-width="5" stroke-linejoin="round"/></symbol>
+    <symbol id="tick" viewBox="0 0 24 24"><path d="M4,13 L10,19 L20,6" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="cross" viewBox="0 0 24 24"><path d="M5,5 L19,19 M19,5 L5,19" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<div class="app">
+  <header class="top">
+    <div class="brand">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#ic1"/></svg>
+      <div><strong>Pancasila dalam Kehidupanku</strong><br><span>Pendidikan Pancasila · Kelas 5 (Fase C)</span></div>
+    </div>
+    <nav class="steps" id="steps" aria-label="Bagian pelajaran"></nav>
+  </header>
+
+  <div class="guide">
+    <svg class="mascot" viewBox="0 0 120 120" role="img" aria-label="Si Garuda, maskot belajar"><use href="#mascot"/></svg>
+    <p class="bubble" id="bubble" aria-live="polite"></p>
+  </div>
+
+  <main id="stage">
+    <!-- 0 PEMBUKA -->
+    <section class="slide" aria-label="Pembuka">
+      <div class="cols">
+        <div>
+          <p class="eyebrow">Bagian 1 dari 6 · Pembuka</p>
+          <h1>Pancasila dalam <span class="hl">Kehidupanku</span></h1>
+          <p class="lead">Yuk, cari tahu nilai-nilai Pancasila yang ada di rumah, di sekolah, dan di sekitarmu!</p>
+          <div class="nameform">
+            <label for="nama">Siapa namamu?</label>
+            <div class="row">
+              <input type="text" id="nama" maxlength="24" placeholder="Tulis namamu di sini" autocomplete="off">
+              <button class="btn primary" id="start" type="button">Mulai Belajar</button>
+            </div>
+          </div>
+          <div class="idcard">
+            <h3>Kartu Belajarku</h3>
+            <dl>
+              <dt>Nama</dt><dd id="idNama">(belum diisi)</dd>
+              <dt>Pelajaran</dt><dd>Pendidikan Pancasila</dd>
+              <dt>Kelas</dt><dd>5 · Fase C</dd>
+              <dt>Topik</dt><dd>Pancasila dalam Kehidupanku</dd>
+            </dl>
+          </div>
+        </div>
+        <div id="garuda0"></div>
+      </div>
+    </section>
+
+    <!-- 1 TUJUAN -->
+    <section class="slide" aria-label="Tujuan pembelajaran">
+      <p class="eyebrow">Bagian 2 dari 6 · Tujuan Belajar</p>
+      <h2>Tujuan Belajar Kita</h2>
+      <div class="goal">
+        <p class="gl">Tujuan pembelajaran</p>
+        <p class="gt">Aku dapat <em>mengidentifikasi nilai-nilai Pancasila</em> dalam kehidupan sehari-hari.</p>
+      </div>
+      <p>Setelah belajar, aku akan bisa:</p>
+      <ul class="checks">
+        <li><label class="check"><input type="checkbox"><span class="box"></span><span class="ct">Menyebutkan lima sila Pancasila beserta lambangnya.</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box"></span><span class="ct">Menemukan nilai Pancasila di rumah, di sekolah, dan di masyarakat.</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box"></span><span class="ct">Mempraktikkan nilai Pancasila dalam kegiatanku setiap hari.</span></label></li>
+      </ul>
+      <p>Centang saat kamu sudah paham tujuannya. Lalu kenali lima sila yang akan kita pelajari:</p>
+      <div class="five" id="fiveBadges"></div>
+    </section>
+
+    <!-- 2 MATERI 1 -->
+    <section class="slide" aria-label="Materi inti: lima sila">
+      <p class="eyebrow">Bagian 3 dari 6 · Materi Inti</p>
+      <h2>Kenalan dengan Lima Sila</h2>
+      <p>Pancasila adalah dasar negara dan pedoman hidup bangsa Indonesia. Isinya ada lima sila. Ketuk lambang di perisai atau pilih nomor sila.</p>
+      <div class="cols wide-left">
+        <div id="garuda1"></div>
+        <div>
+          <div class="tabs" id="silaTabs" role="tablist" aria-label="Pilih sila"></div>
+          <div class="detail" id="silaDetail" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 MATERI 2 -->
+    <section class="slide" aria-label="Materi inti: nilai di sekitarku">
+      <p class="eyebrow">Bagian 3 dari 6 · Materi Inti</p>
+      <h2>Nilai Pancasila di Sekitarku</h2>
+      <p>Nilai Pancasila ada di mana-mana. Pilih tempatnya, lalu lihat contohnya. Mana yang sudah pernah kamu lakukan?</p>
+      <div class="tabs" id="placeTabs" role="tablist" aria-label="Pilih tempat"></div>
+      <ul class="cards" id="placeList"></ul>
+    </section>
+
+    <!-- 4 AKTIVITAS 1 -->
+    <section class="slide" aria-label="Aktivitas: Tebak Sila">
+      <p class="eyebrow">Bagian 4 dari 6 · Aktivitas</p>
+      <h2>Tebak Sila!</h2>
+      <p>Baca cerita pendek di bawah. Sila mana yang sedang diamalkan?</p>
+      <div id="tsBody"></div>
+    </section>
+
+    <!-- 5 AKTIVITAS 2 -->
+    <section class="slide" aria-label="Aktivitas: Pancasila dalam hariku">
+      <p class="eyebrow">Bagian 4 dari 6 · Aktivitas</p>
+      <h2>Pancasila dalam Hariku</h2>
+      <p>Centang kebiasaan baik yang sudah kamu lakukan minggu ini. Bintang di bawah akan terisi.</p>
+      <div class="cols">
+        <ul class="checks" id="habits"></ul>
+        <div>
+          <div class="meter" id="meter" aria-label="Sila yang sudah kamu amalkan"></div>
+          <p class="sum" id="habitSum" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 KUIS -->
+    <section class="slide" aria-label="Kuis benar atau salah">
+      <p class="eyebrow">Bagian 5 dari 6 · Kuis</p>
+      <h2>Kuis: Benar atau Salah?</h2>
+      <div class="qtop"><span id="qno">Soal 1 dari 10</span><span id="qscore">Skor: 0</span></div>
+      <div class="dots" id="qdots" aria-hidden="true"></div>
+      <p class="statement" id="qtext"></p>
+      <div class="qbtns">
+        <button class="btn ans" id="ansT" type="button"><svg aria-hidden="true"><use href="#tick"/></svg>Benar</button>
+        <button class="btn ans false" id="ansF" type="button"><svg aria-hidden="true"><use href="#cross"/></svg>Salah</button>
+      </div>
+      <div id="qfb" aria-live="polite"></div>
+      <button class="btn primary" id="qnext" type="button" hidden>Soal berikutnya</button>
+    </section>
+
+    <!-- 7 HASIL -->
+    <section class="slide" aria-label="Umpan balik">
+      <p class="eyebrow">Bagian 6 dari 6 · Umpan Balik</p>
+      <h2>Hasil Belajarmu</h2>
+      <div id="resBody"></div>
+    </section>
+
+    <!-- 8 REFLEKSI -->
+    <section class="slide" aria-label="Refleksi">
+      <p class="eyebrow">Bagian 6 dari 6 · Refleksi</p>
+      <h2>Waktunya Berefleksi</h2>
+      <p>Belajar hari ini terasa&hellip;</p>
+      <div class="moods" id="moods"></div>
+      <p id="moodMsg" aria-live="polite"></p>
+      <div class="field"><label for="r1">Nilai Pancasila yang sudah sering aku lakukan adalah&hellip;</label>
+        <textarea id="r1" placeholder="Contoh: berdoa sebelum belajar"></textarea></div>
+      <div class="field"><label for="r2">Mulai besok, aku berjanji untuk&hellip;</label>
+        <textarea id="r2" placeholder="Contoh: berbagi bekal dengan teman"></textarea></div>
+      <div class="actions">
+        <button class="btn primary" id="makePledge" type="button">Tampilkan Janji Pancasilaku</button>
+        <button class="btn" id="restartAll" type="button">Belajar dari Awal</button>
+      </div>
+      <p id="pledgeWarn" aria-live="polite"></p>
+      <div id="pledge"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="nav">
+      <button class="btn" id="prev" type="button">&larr; Kembali</button>
+      <div class="count"><span id="count"></span><div class="pager" id="pager" aria-hidden="true"></div></div>
+      <button class="btn primary" id="next" type="button">Lanjut &rarr;</button>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var $=function(s,r){return (r||document).querySelector(s)};
+  var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var NS='http://www.w3.org/2000/svg';
+
+  var SILA=[
+    {n:1,name:'Ketuhanan Yang Maha Esa',short:'Ketuhanan',symbol:'Bintang',
+     mean:'Bintang bersinar terang. Ia mengingatkan kita pada Tuhan Yang Maha Esa.',
+     vals:['Beriman','Taat beribadah','Saling menghormati agama'],
+     ex:'Berdoa sebelum belajar dan menghormati teman yang beribadah dengan cara berbeda.'},
+    {n:2,name:'Kemanusiaan yang Adil dan Beradab',short:'Kemanusiaan',symbol:'Rantai',
+     mean:'Mata rantai saling terhubung. Semua manusia saling membutuhkan dan saling menyayangi.',
+     vals:['Menyayangi sesama','Adil','Sopan dan menghargai'],
+     ex:'Menolong teman yang terjatuh dan tidak mengejek teman.'},
+    {n:3,name:'Persatuan Indonesia',short:'Persatuan',symbol:'Pohon beringin',
+     mean:'Pohon beringin besar dan rindang. Semua orang bisa berteduh di bawahnya, walau berbeda-beda.',
+     vals:['Cinta tanah air','Rukun','Gotong royong'],
+     ex:'Mengikuti upacara bendera dengan tertib dan ikut kerja bakti bersama.'},
+    {n:4,name:'Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan',short:'Kerakyatan',symbol:'Kepala banteng',
+     mean:'Banteng suka berkumpul. Ia mengingatkan kita untuk bermusyawarah dan memutuskan bersama.',
+     vals:['Musyawarah','Mendengarkan pendapat','Menerima keputusan bersama'],
+     ex:'Memilih ketua kelas lewat musyawarah dan menerima hasilnya dengan lapang dada.'},
+    {n:5,name:'Keadilan Sosial bagi Seluruh Rakyat Indonesia',short:'Keadilan Sosial',symbol:'Padi dan kapas',
+     mean:'Padi adalah makanan, kapas adalah pakaian. Semua orang berhak hidup cukup dan sejahtera.',
+     vals:['Adil','Suka berbagi','Rajin bekerja'],
+     ex:'Membagi tugas piket dengan adil dan berbagi dengan teman yang membutuhkan.'}
+  ];
+  var SECTIONS=['Pembuka','Tujuan','Materi Inti','Aktivitas','Kuis','Umpan Balik & Refleksi'];
+  var SEC_OF=[0,1,2,2,3,3,4,5,5];
+  var SEC_FIRST=[0,1,2,4,6,7];
+
+  function nm(){var v=($('#nama').value||'').trim();return v||'Teman';}
+  function fill(t){return t.replace(/\{n\}/g,nm());}
+  function badge(n,cls){return '<span class="badge b'+n+(cls?' '+cls:'')+'"><svg aria-hidden="true"><use href="#ic'+n+'"/></svg></span>';}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]});}
+
+  /* ---------- Garuda kartun ---------- */
+  function garuda(sfx,interactive){
+    var f='';
+    var W=[[-100,92,22],[-78,104,22],[-56,104,22],[-34,96,22],[-12,84,22]];
+    W.forEach(function(a){f+='<rect class="fth" x="'+(-a[2]/2)+'" y="'+(-a[1])+'" width="'+a[2]+'" height="'+a[1]+'" rx="'+(a[2]/2)+'" transform="translate(128 150) rotate('+a[0]+')"/>';});
+    W.forEach(function(a){f+='<rect class="fth" x="'+(-a[2]/2)+'" y="'+(-a[1])+'" width="'+a[2]+'" height="'+a[1]+'" rx="'+(a[2]/2)+'" transform="translate(232 150) rotate('+(-a[0])+')"/>';});
+    var head='<rect x="168" y="86" width="24" height="22" fill="#F5B700" stroke="#8A5A00" stroke-width="3"/>'+
+      '<g fill="#F5B700" stroke="#8A5A00" stroke-width="3"><ellipse cx="166" cy="42" rx="6" ry="13" transform="rotate(-22 166 42)"/><ellipse cx="180" cy="38" rx="6" ry="14"/><ellipse cx="194" cy="42" rx="6" ry="13" transform="rotate(22 194 42)"/></g>'+
+      '<circle cx="180" cy="70" r="28" fill="#F5B700" stroke="#8A5A00" stroke-width="3"/>'+
+      '<path d="M200,66 L228,77 L202,88 Z" fill="#E8860B" stroke="#8A5A00" stroke-width="3" stroke-linejoin="round"/>'+
+      '<circle cx="190" cy="64" r="7" fill="#fff" stroke="#8A5A00" stroke-width="2"/><circle cx="192" cy="65" r="3.5" fill="#2B1414"/><circle cx="193" cy="63.5" r="1.2" fill="#fff"/>';
+    var Q=[
+      {s:4,x:108,y:100,w:72,h:70,fill:'#C8102E',ix:116,iy:107},
+      {s:3,x:180,y:100,w:72,h:70,fill:'#FFFFFF',ix:204,iy:107},
+      {s:5,x:108,y:170,w:72,h:140,fill:'#FFFFFF',ix:118,iy:198},
+      {s:2,x:180,y:170,w:72,h:140,fill:'#C8102E',ix:202,iy:198}
+    ];
+    var q='';
+    Q.forEach(function(o){
+      q+='<g class="q" data-s="'+o.s+'"'+(interactive?' tabindex="0" role="button" aria-label="Sila ke-'+o.s+', '+SILA[o.s-1].symbol+'"':'')+'>'+
+        '<rect x="'+o.x+'" y="'+o.y+'" width="'+o.w+'" height="'+o.h+'" fill="'+o.fill+'" clip-path="url(#sh'+sfx+')"/>'+
+        '<g class="ic"><use href="#ic'+o.s+'" x="'+o.ix+'" y="'+o.iy+'" width="40" height="40"/></g>'+
+        '<circle class="ring" cx="'+(o.ix+20)+'" cy="'+(o.iy+20)+'" r="27"/></g>';
+    });
+    var cross='<g clip-path="url(#sh'+sfx+')"><path d="M180,100 V310 M108,170 H252" stroke="#1D1414" stroke-width="6"/></g>';
+    var center='<g class="q" data-s="1"'+(interactive?' tabindex="0" role="button" aria-label="Sila ke-1, Bintang"':'')+'><circle cx="180" cy="170" r="24" fill="#1D1414"/><g class="ic"><use href="#ic1" x="160" y="150" width="40" height="40"/></g><circle class="ring" cx="180" cy="170" r="30"/></g>';
+    var outline='<path d="M108,100 H252 V200 C252,255 215,285 180,300 C145,285 108,255 108,200 Z" fill="none" stroke="#6B1220" stroke-width="4" pointer-events="none"/>';
+    var ribbon='<rect x="64" y="312" width="232" height="28" rx="8" fill="#FFF6D6" stroke="#6B1220" stroke-width="3"/><text x="180" y="331" text-anchor="middle" font-family="Baloo 2,Trebuchet MS,sans-serif" font-weight="800" font-size="13" fill="#8E0B20">BHINNEKA TUNGGAL IKA</text>';
+    return '<svg class="garuda" viewBox="0 0 360 350" role="img" aria-label="Burung Garuda kartun membawa perisai Pancasila"><defs><clipPath id="sh'+sfx+'"><path d="M108,100 H252 V200 C252,255 215,285 180,300 C145,285 108,255 108,200 Z"/></clipPath></defs>'+f+head+q+cross+center+outline+ribbon+'</svg>';
+  }
+  $('#garuda0').innerHTML=garuda('a',false);
+  $('#garuda1').innerHTML=garuda('b',true);
+
+  /* ---------- Penunjuk bagian & navigasi ---------- */
+  var slides=$$('#stage > .slide');
+  var cur=0;
+  var stepsEl=$('#steps');
+  SECTIONS.forEach(function(s,i){
+    var b=document.createElement('button');
+    b.className='step';b.type='button';b.setAttribute('data-go',SEC_FIRST[i]);
+    b.innerHTML='<b>'+(i+1)+'</b><span class="lbl">'+esc(s)+'</span>';
+    b.setAttribute('aria-label','Bagian '+(i+1)+': '+s);
+    b.addEventListener('click',function(){go(SEC_FIRST[i],true);});
+    stepsEl.appendChild(b);
+  });
+  var pager=$('#pager');
+  slides.forEach(function(){pager.appendChild(document.createElement('i'));});
+
+  var BUB=[
+    'Halo! Aku Si Garuda. Ayo belajar Pancasila bersama!',
+    'Baca dulu tujuan kita ya. Setelah itu kita mulai!',
+    'Ketuk lambang di perisaiku untuk mengenal tiap sila!',
+    'Coba ingat-ingat, mana yang sudah pernah kamu lakukan?',
+    'Pilih sila yang cocok dengan ceritanya. Kamu pasti bisa!',
+    'Centang kebiasaan baik yang sudah kamu lakukan.',
+    'Jawab pelan-pelan ya, {n}. Semangat!',
+    'Ini hasil belajarmu, {n}. Terima kasih sudah berusaha!',
+    'Ceritakan perasaanmu setelah belajar hari ini.'
+  ];
+  function say(t){$('#bubble').textContent=fill(t);}
+
+  function go(i,scroll){
+    i=Math.max(0,Math.min(slides.length-1,i));
+    cur=i;
+    slides.forEach(function(s,k){
+      s.hidden=(k!==i);
+    });
+    var sl=slides[i];
+    sl.style.animation='none';void sl.offsetWidth;sl.style.animation='';
+    $$('.step').forEach(function(b,k){b.setAttribute('aria-current',k===SEC_OF[i]?'true':'false');});
+    $$('#pager i').forEach(function(d,k){d.className=(k===i?'cur':'');});
+    $('#count').textContent='Halaman '+(i+1)+' dari '+slides.length;
+    $('#prev').disabled=(i===0);
+    $('#next').hidden=(i===slides.length-1);
+    say(BUB[i]);
+    if(i===7)renderResult();
+    if(i===0)$('#idNama').textContent=($('#nama').value||'').trim()||'(belum diisi)';
+    if(scroll)window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+  }
+  $('#prev').addEventListener('click',function(){go(cur-1,true);});
+  $('#next').addEventListener('click',function(){go(cur+1,true);});
+  $('#start').addEventListener('click',function(){go(1,true);});
+  $('#nama').addEventListener('input',function(){$('#idNama').textContent=this.value.trim()||'(belum diisi)';});
+  $('#nama').addEventListener('keydown',function(e){if(e.key==='Enter')go(1,true);});
+
+  function burst(el){
+    if(reduce||!el)return;
+    var r=el.getBoundingClientRect();
+    for(var i=0;i<16;i++){
+      var s=document.createElement('i');s.className='conf';
+      s.style.left=(r.left+r.width/2)+'px';s.style.top=(r.top+r.height/2)+'px';
+      s.style.setProperty('--dx',(Math.random()*260-130)+'px');
+      s.style.setProperty('--dy',(-Math.random()*150-40)+'px');
+      s.style.setProperty('--rot',(Math.random()*540-270)+'deg');
+      s.style.background=(i%2?'#F5B700':'#C8102E');
+      document.body.appendChild(s);
+      setTimeout((function(n){return function(){n.remove();};})(s),1000);
+    }
+  }
+
+  /* ---------- Tujuan ---------- */
+  $('#fiveBadges').innerHTML=SILA.map(function(s){return '<span style="display:inline-flex;align-items:center;gap:6px">'+badge(s.n,'sm')+'<b>Sila '+s.n+'</b></span>';}).join('');
+
+  /* ---------- Materi 1 ---------- */
+  var tabs=$('#silaTabs');
+  SILA.forEach(function(s){
+    var b=document.createElement('button');
+    b.className='tab';b.type='button';b.setAttribute('role','tab');b.setAttribute('data-s',s.n);
+    b.innerHTML=badge(s.n)+'<span>Sila '+s.n+'</span>';
+    b.addEventListener('click',function(){showSila(s.n);});
+    tabs.appendChild(b);
+  });
+  function showSila(n){
+    var s=SILA[n-1];
+    $$('#silaTabs .tab').forEach(function(b){b.setAttribute('aria-selected',String(+b.getAttribute('data-s')===n));});
+    $$('#garuda1 .q').forEach(function(g){g.classList.toggle('on',+g.getAttribute('data-s')===n);});
+    var d=$('#silaDetail');
+    d.innerHTML='<p class="no">Sila ke-'+s.n+'</p><h3>'+esc(s.name)+'</h3>'+
+      '<p><b>Lambang: '+esc(s.symbol)+'.</b> '+esc(s.mean)+'</p>'+
+      '<div class="chips">'+s.vals.map(function(v){return '<span class="chip">'+esc(v)+'</span>';}).join('')+'</div>'+
+      '<div class="ex"><b>Contoh di hari-hariku</b><p style="margin:2px 0 0">'+esc(s.ex)+'</p></div>';
+    d.style.animation='none';void d.offsetWidth;d.style.animation='';
+  }
+  $$('#garuda1 .q').forEach(function(g){
+    var n=+g.getAttribute('data-s');
+    g.addEventListener('click',function(){showSila(n);});
+    g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();showSila(n);}});
+  });
+  showSila(1);
+
+  /* ---------- Materi 2 ---------- */
+  var PLACES=[
+    {k:'Di Rumah',items:[
+      [1,'Berdoa bersama keluarga sebelum makan.'],
+      [2,'Menyayangi adik dan berbicara dengan sopan.'],
+      [3,'Membantu pekerjaan rumah bersama-sama.'],
+      [4,'Ikut mendengarkan dan berbicara saat keluarga memutuskan sesuatu.'],
+      [5,'Berbagi makanan dengan adik atau kakak.']]},
+    {k:'Di Sekolah',items:[
+      [1,'Berdoa sebelum dan sesudah belajar.'],
+      [2,'Menolong teman yang sakit atau terjatuh.'],
+      [3,'Mengikuti upacara bendera dengan tertib.'],
+      [4,'Memilih ketua kelas lewat musyawarah.'],
+      [5,'Membagi tugas piket secara adil.']]},
+    {k:'Di Masyarakat',items:[
+      [1,'Menghormati tetangga yang beribadah dengan cara berbeda.'],
+      [2,'Menyumbang untuk saudara yang terkena bencana.'],
+      [3,'Ikut kerja bakti membersihkan lingkungan.'],
+      [4,'Warga RT bermusyawarah sebelum mengadakan lomba 17 Agustus.'],
+      [5,'Membantu tetangga yang kesulitan tanpa pilih-pilih.']]}
+  ];
+  var pt=$('#placeTabs');
+  PLACES.forEach(function(p,i){
+    var b=document.createElement('button');
+    b.className='tab ptab';b.type='button';b.setAttribute('role','tab');b.textContent=p.k;
+    b.addEventListener('click',function(){showPlace(i);});
+    pt.appendChild(b);
+  });
+  function showPlace(i){
+    $$('#placeTabs .tab').forEach(function(b,k){b.setAttribute('aria-selected',String(k===i));});
+    $('#placeList').innerHTML=PLACES[i].items.map(function(it,k){
+      return '<li class="item" style="animation-delay:'+(k*60)+'ms">'+badge(it[0])+'<div class="tx">'+esc(it[1])+'<small>Sila ke-'+it[0]+' · '+esc(SILA[it[0]-1].short)+'</small></div></li>';
+    }).join('');
+  }
+  showPlace(0);
+
+  /* ---------- Aktivitas 1: Tebak Sila ---------- */
+  var TS=[
+    {t:'Satu kelas berdoa bersama sebelum pelajaran dimulai.',a:1,why:'Berdoa menunjukkan kita percaya dan taat kepada Tuhan Yang Maha Esa.',hint:'Pikirkan tentang beriman dan beribadah.'},
+    {t:'Rani mengulurkan tangan membantu temannya yang terjatuh di halaman sekolah.',a:2,why:'Menolong sesama adalah wujud kemanusiaan yang adil dan beradab.',hint:'Ada yang butuh pertolongan. Sila mana yang tentang menyayangi sesama manusia?'},
+    {t:'Murid kelas 5 ikut kerja bakti membersihkan halaman sekolah bersama-sama.',a:3,why:'Bekerja bersama dan hidup rukun adalah nilai persatuan dan gotong royong.',hint:'Kata kuncinya: bersama-sama dan gotong royong.'},
+    {t:'Jadwal piket kelas dibagi adil, semua murid mendapat giliran yang sama.',a:5,why:'Bersikap adil kepada semua orang adalah nilai keadilan sosial.',hint:'Kata kuncinya: adil untuk semua dan tidak pilih kasih.'},
+    {t:'Kelas memilih ketua kelas lewat musyawarah, lalu semua menerima hasilnya.',a:4,why:'Musyawarah dan menghargai pendapat adalah nilai kerakyatan.',hint:'Kata kuncinya: musyawarah dan memutuskan bersama.'},
+    {t:'Dito tidak mengejek temannya yang bertubuh kecil. Ia malah mengajaknya bermain.',a:2,why:'Menghargai dan tidak merendahkan orang lain adalah nilai kemanusiaan.',hint:'Ada teman yang perlu dihargai. Sila mana yang tentang saling menghargai sebagai manusia?'}
+  ];
+  var ts={i:0,first:0,missed:false,done:false};
+  function renderTS(){
+    var b=$('#tsBody');
+    if(ts.done){
+      b.innerHTML='<div class="fb good"><p class="ft">Selesai! Kerja bagus, '+esc(nm())+'!</p><p>Kamu menjawab tepat pada percobaan pertama sebanyak <b>'+ts.first+' dari '+TS.length+'</b> cerita.</p></div>'+
+        '<div class="actions"><button class="btn primary" id="tsNext" type="button">Lanjut ke Pancasila dalam Hariku</button><button class="btn" id="tsAgain" type="button">Main lagi</button></div>';
+      $('#tsNext').addEventListener('click',function(){go(5,true);});
+      $('#tsAgain').addEventListener('click',function(){ts={i:0,first:0,missed:false,done:false};renderTS();});
+      return;
+    }
+    var it=TS[ts.i];
+    b.innerHTML='<div class="progress"><span>Cerita '+(ts.i+1)+' dari '+TS.length+'</span><span>Tepat pertama kali: '+ts.first+'</span></div>'+
+      '<p class="story">'+esc(it.t)+'</p>'+
+      '<div class="opts" id="tsOpts">'+SILA.map(function(s){return '<button class="opt" type="button" data-s="'+s.n+'">'+badge(s.n,'sm')+'<span>Sila '+s.n+'<small>'+esc(s.short)+'</small></span></button>';}).join('')+'</div>'+
+      '<div id="tsFb" aria-live="polite"></div><button class="btn primary" id="tsGo" type="button" hidden>'+(ts.i===TS.length-1?'Lihat hasil':'Cerita berikutnya')+'</button>';
+    $$('#tsOpts .opt').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var n=+btn.getAttribute('data-s');
+        var fb=$('#tsFb');
+        if(n===it.a){
+          btn.classList.add('right');
+          $$('#tsOpts .opt').forEach(function(o){o.disabled=true;});
+          if(!ts.missed)ts.first++;
+          fb.innerHTML='<div class="fb good"><p class="ft">Tepat sekali!</p><p>'+esc(it.why)+'</p></div>';
+          burst(btn);say('Mantap, '+nm()+'! Jawabanmu tepat.');
+          $('#tsGo').hidden=false;
+        }else{
+          btn.classList.add('wrong');btn.disabled=true;ts.missed=true;
+          fb.innerHTML='<div class="fb bad"><p class="ft">Belum tepat, coba lagi ya.</p><p>Petunjuk: '+esc(it.hint)+'</p></div>';
+          say('Tidak apa-apa, '+nm()+'. Coba sekali lagi!');
+        }
+      });
+    });
+    $('#tsGo').addEventListener('click',function(){
+      ts.missed=false;
+      if(ts.i===TS.length-1){ts.done=true;}else{ts.i++;}
+      renderTS();
+    });
+  }
+  renderTS();
+
+  /* ---------- Aktivitas 2: Pancasila dalam Hariku ---------- */
+  var HAB=[
+    [1,'Berdoa sebelum dan sesudah kegiatan.'],
+    [1,'Menghormati teman yang beribadah berbeda.'],
+    [2,'Membantu teman yang kesulitan.'],
+    [2,'Berbicara sopan dan tidak mengejek.'],
+    [3,'Mengikuti upacara bendera dengan tertib.'],
+    [3,'Ikut kerja bakti atau piket kelas.'],
+    [4,'Mendengarkan pendapat teman saat diskusi.'],
+    [4,'Menerima hasil keputusan bersama.'],
+    [5,'Berbagi dengan orang lain.'],
+    [5,'Bersikap adil dan tidak pilih kasih.']
+  ];
+  $('#habits').innerHTML=HAB.map(function(h,i){
+    return '<li><label class="check">'+'<input type="checkbox" id="hab'+i+'" data-s="'+h[0]+'"><span class="box"></span>'+badge(h[0],'sm')+'<span class="ct">'+esc(h[1])+'</span></label></li>';
+  }).join('');
+  $('#meter').innerHTML=SILA.map(function(s){
+    return '<div class="mrow">'+badge(s.n,'sm')+'<span class="nm">'+esc(s.short)+'</span><span class="mbar" data-s="'+s.n+'"><i></i><i></i></span></div>';
+  }).join('');
+  function habitCount(){return $$('#habits input:checked').length;}
+  function updHabits(){
+    var cnt=[0,0,0,0,0,0];
+    $$('#habits input:checked').forEach(function(c){cnt[+c.getAttribute('data-s')]++;});
+    $$('#meter .mbar').forEach(function(bar){
+      var n=+bar.getAttribute('data-s');
+      $$('i',bar).forEach(function(seg,k){seg.classList.toggle('on',k<cnt[n]);});
+    });
+    var t=habitCount(),txt;
+    if(t===0)txt='Centang kebiasaan baik yang sudah kamu lakukan minggu ini.';
+    else if(t===HAB.length)txt='Luar biasa, '+nm()+'! Kamu sudah mengamalkan semua kebiasaan baik. Pertahankan ya!';
+    else{
+      var best=1;for(var k=2;k<=5;k++){if(cnt[k]>cnt[best])best=k;}
+      txt='Kamu sudah melakukan '+t+' dari '+HAB.length+' kebiasaan baik. Yang paling sering: sila ke-'+best+' ('+SILA[best-1].short+').';
+    }
+    $('#habitSum').textContent=txt;
+  }
+  $$('#habits input').forEach(function(c){c.addEventListener('change',function(){updHabits();if(c.checked)burst(c.nextElementSibling);});});
+  updHabits();
+
+  /* ---------- Kuis ---------- */
+  var QZ=[
+    {q:'Lambang sila pertama adalah bintang.',a:true,fact:'Lambang sila ke-1 adalah bintang, tanda Ketuhanan Yang Maha Esa.'},
+    {q:'Berdoa sebelum belajar adalah contoh pengamalan sila ke-2.',a:false,fact:'Berdoa sebelum belajar adalah pengamalan sila ke-1, Ketuhanan Yang Maha Esa. Sila ke-2 tentang kemanusiaan, seperti menolong dan menghargai sesama.'},
+    {q:'Menolong teman yang sedang kesusahan menunjukkan nilai kemanusiaan.',a:true,fact:'Menolong teman yang kesusahan menunjukkan kemanusiaan yang adil dan beradab (sila ke-2).'},
+    {q:'Kerja bakti membersihkan lingkungan menunjukkan nilai persatuan dan gotong royong.',a:true,fact:'Kerja bakti membuat kita rukun dan bergotong royong. Itu nilai Persatuan Indonesia (sila ke-3).'},
+    {q:'Memaksakan kehendak saat rapat kelas sesuai dengan sila ke-4.',a:false,fact:'Sila ke-4 mengajarkan musyawarah. Kita mendengarkan pendapat semua orang dan memutuskan bersama, bukan memaksakan kehendak.'},
+    {q:'Lambang sila kelima adalah padi dan kapas.',a:true,fact:'Padi dan kapas melambangkan sila ke-5, keadilan sosial. Semua orang berhak cukup makan dan berpakaian.'},
+    {q:'Mengejek teman yang berbeda suku sesuai dengan sila Persatuan Indonesia.',a:false,fact:'Mengejek teman karena berbeda suku merusak persatuan. Sila ke-3 mengajak kita rukun walau berbeda-beda.'},
+    {q:'Membagi tugas piket dengan adil mencerminkan sila ke-5.',a:true,fact:'Bersikap adil kepada semua teman adalah nilai keadilan sosial (sila ke-5).'},
+    {q:'Menghormati teman yang beribadah berbeda dengan kita termasuk pengamalan sila ke-1.',a:true,fact:'Menghormati ibadah orang lain adalah sikap toleran, pengamalan sila ke-1.'},
+    {q:'Pancasila hanya dipakai saat upacara bendera, bukan dalam kehidupan sehari-hari.',a:false,fact:'Pancasila adalah pedoman hidup kita setiap hari: di rumah, di sekolah, dan di masyarakat. Bukan hanya saat upacara.'}
+  ];
+  var OKMSG=[
+    'Hebat, {n}! Kamu menjawab dengan tepat.',
+    'Mantap! Pengetahuanmu tentang Pancasila makin kuat.',
+    'Bagus sekali, {n}! Terus pertahankan ya.',
+    'Tepat sekali! Kamu murid yang teliti.',
+    'Luar biasa! Kamu cerdas dan rajin belajar.',
+    'Keren, {n}! Satu bintang lagi untukmu.',
+    'Jawabanmu benar! Bapak dan Ibu guru pasti bangga.',
+    'Pintar sekali! Kamu paham nilai Pancasila.',
+    'Wah, hebat! Kamu makin jago, {n}.',
+    'Sempurna! Terima kasih sudah belajar dengan sungguh-sungguh.'
+  ];
+  var MOT=[
+    'Tidak apa-apa, {n}. Salah itu bagian dari belajar.',
+    'Jangan menyerah! Soal berikutnya pasti bisa.',
+    'Kamu sudah berusaha, dan itu yang terpenting.',
+    'Setiap kesalahan membuat kita makin pintar.',
+    'Tarik napas, baca pelan-pelan, kamu pasti bisa.'
+  ];
+  var qz={i:0,ans:[],locked:false};
+  function qScore(){return qz.ans.filter(function(a){return a&&a.ok;}).length;}
+  function renderQ(){
+    var i=qz.i;
+    $('#qno').textContent='Soal '+(i+1)+' dari '+QZ.length;
+    $('#qscore').textContent='Skor: '+qScore();
+    $('#qdots').innerHTML=QZ.map(function(_,k){
+      var a=qz.ans[k];return '<i class="'+(a?(a.ok?'ok':'no'):(k===i?'cur':''))+'"></i>';
+    }).join('');
+    var t=$('#qtext');t.textContent=QZ[i].q;
+    t.style.animation='none';void t.offsetWidth;t.style.animation='';
+    $('#qfb').innerHTML='';
+    $('#qnext').hidden=true;
+    qz.locked=false;
+    $('#ansT').disabled=false;$('#ansF').disabled=false;
+    $('#ansT').classList.remove('picked');$('#ansF').classList.remove('picked');
+  }
+  function answer(v){
+    if(qz.locked)return;
+    qz.locked=true;
+    var i=qz.i,item=QZ[i],ok=(v===item.a);
+    qz.ans[i]={ok:ok,pick:v};
+    $('#ansT').disabled=true;$('#ansF').disabled=true;
+    $(v?'#ansT':'#ansF').classList.add('picked');
+    $(v?'#ansT':'#ansF').disabled=false;
+    $(v?'#ansT':'#ansF').style.opacity='1';
+    var fb=$('#qfb');
+    if(ok){
+      fb.innerHTML='<div class="fb good"><p class="ft">Jawabanmu benar!</p><p>'+esc(fill(OKMSG[i]))+'</p></div>';
+      burst($(v?'#ansT':'#ansF'));say('Mantap, '+nm()+'!');
+    }else{
+      fb.innerHTML='<div class="fb bad"><p class="ft">Belum tepat. Jawaban yang benar: '+(item.a?'BENAR':'SALAH')+'.</p><p>'+esc(item.fact)+'</p><p>'+esc(fill(MOT[i%MOT.length]))+'</p></div>';
+      say('Tidak apa-apa, '+nm()+'. Ayo semangat!');
+    }
+    $('#qscore').textContent='Skor: '+qScore();
+    $$('#qdots i').forEach(function(d,k){if(k===i)d.className=ok?'ok':'no';});
+    var nx=$('#qnext');nx.textContent=(i===QZ.length-1?'Lihat hasil':'Soal berikutnya');nx.hidden=false;
+  }
+  $('#ansT').addEventListener('click',function(){answer(true);});
+  $('#ansF').addEventListener('click',function(){answer(false);});
+  $('#qnext').addEventListener('click',function(){
+    if(qz.i===QZ.length-1){go(7,true);return;}
+    qz.i++;renderQ();say(BUB[6]);
+  });
+  renderQ();
+
+  /* ---------- Hasil & umpan balik ---------- */
+  function starSvg(n){
+    var h='<div class="stars" role="img" aria-label="'+n+' dari 3 bintang">';
+    for(var k=0;k<3;k++)h+='<svg class="'+(k<n?'':'off')+'" viewBox="0 0 100 100" aria-hidden="true"><use href="#starfull"/></svg>';
+    return h+'</div>';
+  }
+  function renderResult(){
+    var b=$('#resBody');
+    var done=qz.ans.filter(Boolean).length;
+    if(done<QZ.length){
+      b.innerHTML='<div class="fb bad"><p class="ft">Kuis belum selesai</p><p>Kamu baru menjawab '+done+' dari '+QZ.length+' soal. Selesaikan dulu kuisnya supaya hasilnya muncul.</p></div><div class="actions"><button class="btn primary" id="toQuiz" type="button">Kembali ke kuis</button></div>';
+      $('#toQuiz').addEventListener('click',function(){go(6,true);});
+      return;
+    }
+    var s=qScore(),title,msg,st;
+    if(s>=9){title='Pahlawan Pancasila';st=3;msg='Luar biasa, '+nm()+'! Kamu sudah sangat paham nilai-nilai Pancasila. Ajak temanmu belajar juga ya.';}
+    else if(s>=7){title='Murid Teladan';st=2;msg='Bagus sekali, '+nm()+'! Tinggal sedikit lagi. Baca ulang bagian yang masih keliru di bawah ini.';}
+    else{title='Penjelajah Pancasila';st=1;msg='Tidak apa-apa, '+nm()+'. Yang penting kamu mau belajar. Yuk, buka lagi materinya dan coba kuis sekali lagi.';}
+    var wrong=[];QZ.forEach(function(q,k){if(!qz.ans[k].ok)wrong.push([k,q]);});
+    var rev=wrong.length?'<h3 style="margin-top:6px">Yuk, ingat lagi</h3><ul class="review">'+wrong.map(function(w){return '<li><b>Soal '+(w[0]+1)+'.</b> '+esc(w[1].fact)+'</li>';}).join('')+'</ul>':'<p class="sum">Semua jawabanmu benar. Tidak ada yang perlu diulang!</p>';
+    b.innerHTML='<div class="score"><div class="big" aria-label="Skor kuis">'+s+'<small>dari '+QZ.length+'</small></div><div><h3>'+title+'</h3>'+starSvg(st)+'<p style="margin:0">'+esc(msg)+'</p></div></div>'+
+      '<div class="stats"><div class="stat"><b>'+s+'/'+QZ.length+'</b>Kuis benar-salah</div><div class="stat"><b>'+ts.first+'/'+TS.length+'</b>Tebak Sila, tepat pertama kali</div><div class="stat"><b>'+habitCount()+'/'+HAB.length+'</b>Kebiasaan baik dicentang</div></div>'+rev+
+      '<div class="actions"><button class="btn primary" id="toRefl" type="button">Lanjut ke Refleksi</button><button class="btn" id="redo" type="button">Ulangi kuis</button><button class="btn" id="reread" type="button">Buka materi lagi</button></div>';
+    $('#toRefl').addEventListener('click',function(){go(8,true);});
+    $('#redo').addEventListener('click',function(){qz={i:0,ans:[],locked:false};renderQ();go(6,true);});
+    $('#reread').addEventListener('click',function(){go(2,true);});
+    if(st===3)burst($('.big'));
+  }
+
+  /* ---------- Refleksi ---------- */
+  var MOODS=[
+    {k:'Mudah',f:'face1',m:'Hebat! Kamu bisa membantu temanmu yang masih bingung ya.'},
+    {k:'Seru',f:'face2',m:'Asyik! Ceritakan hal seru hari ini kepada keluargamu.'},
+    {k:'Masih bingung',f:'face3',m:'Tidak apa-apa. Buka lagi materinya, atau tanyakan kepada Bapak/Ibu guru.'}
+  ];
+  var mo=$('#moods');
+  MOODS.forEach(function(m){
+    var b=document.createElement('button');
+    b.type='button';b.className='mood';b.setAttribute('aria-pressed','false');
+    b.innerHTML='<svg viewBox="0 0 60 60" aria-hidden="true"><use href="#'+m.f+'"/></svg><span>'+m.k+'</span>';
+    b.addEventListener('click',function(){
+      $$('#moods .mood').forEach(function(x){x.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true');
+      $('#moodMsg').textContent=m.m;
+    });
+    mo.appendChild(b);
+  });
+  $('#makePledge').addEventListener('click',function(){
+    var p=$('#r2').value.trim();
+    if(!p){$('#pledgeWarn').textContent='Isi dulu janjimu di kolom "Mulai besok, aku berjanji untuk…" ya.';return;}
+    $('#pledgeWarn').textContent='';
+    p=p.replace(/[.!\s]+$/,'');
+    var h=$('#pledge');
+    h.innerHTML='<div class="pledge"><svg width="44" height="44" viewBox="0 0 100 100" aria-hidden="true"><use href="#ic1"/></svg><h3>Janji Pancasilaku</h3><p>Mulai besok, aku berjanji untuk '+esc(p)+'.</p><p class="sig">'+esc(nm())+' · Kelas 5</p></div>';
+    burst($('#makePledge'));say('Janji yang bagus, '+nm()+'! Aku bangga padamu.');
+  });
+  $('#restartAll').addEventListener('click',function(){
+    ts={i:0,first:0,missed:false,done:false};renderTS();
+    qz={i:0,ans:[],locked:false};renderQ();
+    $$('#habits input').forEach(function(c){c.checked=false;});updHabits();
+    $$('#stage .checks input').forEach(function(c){c.checked=false;});
+    $('#r1').value='';$('#r2').value='';$('#pledge').innerHTML='';$('#moodMsg').textContent='';
+    $$('#moods .mood').forEach(function(x){x.setAttribute('aria-pressed','false');});
+    go(0,true);
+  });
+
+  go(0,false);
+})();
+</script>
+
+</body></html>
